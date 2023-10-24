@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {useNavigate} from "react-router-dom";
 
+
 const Login = () => {
     const [loginData, setLoginData] = useState({})
     const [login, setLogin] = useState(null)
@@ -17,7 +18,7 @@ const Login = () => {
     }
 
     const onSubmit = async (e) => {
-        e.preventDefault();
+              e.preventDefault();
 
         try {
             const response = await fetch(`${process.env.REACT_APP_SERVER_BASE_URL}/login`, {
@@ -41,10 +42,11 @@ const Login = () => {
     }
 
     const redirectForLoginWithGithub = () => {
-      window.location.href = `${process.env.REACT_APP_SERVER_BASE_URL}/auth/github`
+      window.location.href = `${process.env.REACT_APP_SERVER_BASE_URL}/auth/github`;
     }
-
-
+    
+  
+//<button onClick={() => redirectHandler()}> </button>
 
 
   return (

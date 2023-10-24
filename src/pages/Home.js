@@ -54,8 +54,9 @@ const Home = () => {
               />
             );
           })}
+        
       </div>
-       
+      
     </MainLayout>
   );
 };
